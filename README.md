@@ -1,5 +1,9 @@
 # Python Proxy Server
 
+Amazon Web Services' (AWS) serverless offering, [AWS Lambda](https://aws.amazon.com/lambda/), is part of their "always free tier". What that means is you get 1 million requests per month, or 3.2 million seconds of compute time per month, for free. Forever. 
+
+You can deploy a simple flask app on lambda, which will make your web requests for you from within AWS. The deployment is seamlessly handled by [zappa](https://github.com/Miserlou/Zappa), a framework for managing serverless Python applications.
+
 <p align="center">
     <img src="media/architecture.png" height="400px">
 </p>
@@ -7,10 +11,8 @@
 ## Setup
 
 1. Clone repo
-2. Run `poetry install --no-root` from the root of the repo to create a new virtual environment with the three project dependencies; [zappa](https://github.com/Miserlou/Zappa), [requests](https://github.com/psf/requests) and [flask](https://github.com/pallets/flask)
-* If you don't have poetry install, you can install it as per the instructions [here](https://python-poetry.org/docs/#osx-linux-bashonwindows-install-instructions)
-* Alternatively, you can use [pipenv](https://github.com/pypa/pipenv) or manually create a [virtual environment](https://docs.python.org/3/tutorial/venv.html) with the three aforementioned dependencies. 
-3. [Optionally] Configure the `zappa_settings.json`
+2. Run `poetry install --no-root` from the root of the repo to create a new virtual environment with the three project dependencies; [zappa](https://github.com/Miserlou/Zappa), [requests](https://github.com/psf/requests) and [flask](https://github.com/pallets/flask). If you don't have poetry install, you can install it as per the instructions [here](https://python-poetry.org/docs/#osx-linux-bashonwindows-install-instructions). Alternatively, you can use [pipenv](https://github.com/pypa/pipenv) or manually create a [virtual environment](https://docs.python.org/3/tutorial/venv.html) with the three aforementioned dependencies.
+3. **[optionally]** Configure the `zappa_settings.json`
 
 Out of the box, this repo will deploy two proxy servers, one in `us-east-1` and one in `us-west-1`.
 
