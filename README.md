@@ -2,7 +2,7 @@
 
 Amazon Web Services' (AWS) serverless offering, [AWS Lambda](https://aws.amazon.com/lambda/), is part of their "always free tier". What that means is you get 1 million requests per month, or 3.2 million seconds of compute time per month, for free. Forever. 
 
-You can deploy a simple flask app on lambda, which will make your web requests for you from within AWS. The deployment is seamlessly handled by [zappa](https://github.com/Miserlou/Zappa), a framework for managing serverless Python applications.
+You can deploy a simple Flask app on Lambda, which will make your web requests for you from within AWS' network, rather than your local, or web scraping machine's IP address. This can help you get around firewalls, or websites that will block your IP address after repeated requests. The deployment is seamlessly handled by [Zappa](https://github.com/Miserlou/Zappa), a framework for managing serverless Python applications.
 
 <p align="center">
     <img src="media/architecture.png" height="400px">
