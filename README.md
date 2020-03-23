@@ -8,6 +8,8 @@ You can deploy a simple flask app on lambda, which will make your web requests f
     <img src="media/architecture.png" height="400px">
 </p>
 
+Check out the [accompanying blog post](https://ianwhitestone.work/free-python-proxy-server/) for more info.
+
 ## Setup
 
 1. Clone repo
