@@ -1,6 +1,8 @@
 # Python Proxy Server
 
-<img src="media/architecture.png">
+<p align="center">
+    <img src="media/architecture.png" height="400px">
+</p>
 
 ## Setup
 
@@ -19,7 +21,6 @@ Out of the box, this repo will deploy two proxy servers, one in `us-east-1` and 
         "aws_region": "us-east-1",
         "project_name": "proxy",
         "runtime": "python3.8",
-        // ignore large media files in repo
         "exclude": ["*.png", "*.gif"]
     },
     "proxy_us_west_1": {
@@ -32,7 +33,7 @@ Out of the box, this repo will deploy two proxy servers, one in `us-east-1` and 
 }
 ```
 
-This can be easily modified to suit your needs, by removing or adding more lambda functions in other regions. See the [zappa docs](https://github.com/Miserlou/Zappa#advanced-settings/) for a full list of settings than can be configured in `zappa_settings.json`.
+Note, the `"exclude": ["*.png", "*.gif"]` setting prevents the files in the `media` folder of this repo from being included in the lambda deployment package. If you are working from scratch in your own repo, you can remove this. The zappa config can be easily modified to suit your needs, by removing or adding more lambda functions in other regions. See the [zappa docs](https://github.com/Miserlou/Zappa#advanced-settings/) for a full list of settings than can be configured in `zappa_settings.json`.
 
 4. Deploy all lambda functions by running `zappa deploy --all`
 
@@ -70,7 +71,7 @@ You can now interact with the requests response object as you would normally:
 
 ### Local demo
 
-Here's a demo of running the proxy locally, with `python proxy.py`:
+Here's a demo of running the proxy server locally, with `python proxy.py`:
 
 <img src="media/local_demo.gif">
 

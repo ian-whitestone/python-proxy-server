@@ -4,7 +4,6 @@
         "aws_region": "us-east-1",
         "project_name": "proxy",
         "runtime": "python3.8",
-        // ignore large media files in repo
         "exclude": ["*.png", "*.gif"]
     },
     "proxy_us_west_1": {
